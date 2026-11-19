@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 font-sans antialiased;
+  }
+}
+
+/* Utility cetak resmi A4/A5 */
+@media print {
+  body {
+    background: transparent !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-page {
+    page-break-after: always;
+    margin: 0;
+    padding: 1.5cm;
+  }
+}
